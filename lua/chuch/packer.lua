@@ -74,5 +74,14 @@ return require('packer').startup(function(use)
         use("eandrju/cellular-automaton.nvim")
         use("laytan/cloak.nvim")
 
+        use {
+            'nvim-tree/nvim-tree.lua',
+            requires = {
+                'nvim-tree/nvim-web-devicons', -- optional
+            },
+            config = function()
+                require("nvim-tree").setup {}
+            end
+        }
     end)
 
