@@ -3,6 +3,8 @@
  vim.opt.nu = true
 
 
+vim.opt.splitright = true
+
 vim.opt.relativenumber = true
 
 vim.opt.tabstop = 4

@@ -13,6 +13,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+
+-- quit all windows
+vim.keymap.set("n", "<leader>q" , "<cmd>q<CR><cmd>q<CR><cmd>q<CR>")
+
 vim.keymap.set("n", "<leader>vwm", function()
     require("vim-with-me").StartVimWithMe()
 end)
