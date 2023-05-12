@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
-vim.keymap.set("n", "<leader>n", "<cmd>NvimTreeToggle<CR>")
+vim.keymap.set("n", "<leader>nvt", "<cmd>NvimTreeToggle<CR>")
 vim.keymap.set("n", "<leader>nt", "<cmd>NvimTreeFocus<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -17,12 +17,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- quit all windows
 vim.keymap.set("n", "<leader>q" , "<cmd>q<CR><cmd>q<CR><cmd>q<CR>")
 
-vim.keymap.set("n", "<leader>vwm", function()
-    require("vim-with-me").StartVimWithMe()
-end)
-vim.keymap.set("n", "<leader>svwm", function()
-    require("vim-with-me").StopVimWithMe()
-end)
 
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
