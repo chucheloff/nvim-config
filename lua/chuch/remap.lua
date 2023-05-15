@@ -22,8 +22,12 @@ vim.keymap.set("n", "<leader>q" , "<cmd>q<CR><cmd>q<CR><cmd>q<CR>")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
+-- copy to clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- paste from clipboard
+vim.keymap.set("n", "<leader>P", [["+p]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 

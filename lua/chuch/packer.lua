@@ -13,13 +13,8 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     use({
         "folke/trouble.nvim",
@@ -50,38 +45,40 @@ return require('packer').startup(function(use)
             'VonHeikemen/lsp-zero.nvim',
             branch = 'v1.x',
             requires = {
-                -- LSP Support
+                --  LSP Support
                 {'neovim/nvim-lspconfig'},
-                {'williamboman/mason.nvim'},
-                {'williamboman/mason-lspconfig.nvim'},
+                {'williamboman/mason.nvim', build = function()
+                    vim.cmd("MasonUpdate")
+                end},
+            {'williamboman/mason-lspconfig.nvim'},
 
-                -- Autocompletion
-                {'hrsh7th/nvim-cmp'},
-                {'hrsh7th/cmp-buffer'},
-                {'hrsh7th/cmp-path'},
-                {'saadparwaiz1/cmp_luasnip'},
-                {'hrsh7th/cmp-nvim-lsp'},
-                {'hrsh7th/cmp-nvim-lua'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-buffer'},
+            {'hrsh7th/cmp-path'},
+            {'saadparwaiz1/cmp_luasnip'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'hrsh7th/cmp-nvim-lua'},
 
-                -- Snippets
-                {'L3MON4D3/LuaSnip'},
-                {'rafamadriz/friendly-snippets'},
-            }
+            -- Snippets
+            {'L3MON4D3/LuaSnip'},
+            {'rafamadriz/friendly-snippets'},
         }
+    }
 
-        use("folke/zen-mode.nvim")
-        use("github/copilot.vim")
-        use("eandrju/cellular-automaton.nvim")
-        use("laytan/cloak.nvim")
+    use("folke/zen-mode.nvim")
+    use("github/copilot.vim")
+    use("eandrju/cellular-automaton.nvim")
+    use("laytan/cloak.nvim")
 
-        use {
-            'nvim-tree/nvim-tree.lua',
-            requires = {
-                'nvim-tree/nvim-web-devicons', -- optional
-            },
-            config = function()
-                require("nvim-tree").setup {}
-            end
-        }
-    end)
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end
+    }
+end)
 

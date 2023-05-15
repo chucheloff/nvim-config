@@ -1,7 +1,4 @@
--- vim.opt.guicursor = " "
-
- vim.opt.nu = true
-
+vim.opt.nu = true
 
 vim.opt.splitright = true
 
@@ -33,3 +30,7 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldnestmax=10
+vim.opt.foldenable = false
+vim.opt.foldlevel=2
