@@ -11,8 +11,8 @@ let mapleader = " "
 
 
 nnoremap <leader>pf <C-F>
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nt :NERDTreeFocus<CR>
+nnoremap <leader>nvt :NERDTreeToggle<CR>
 
 " Disable arrow keys (Normal mode)
 nnoremap <left> <nop>
@@ -41,7 +41,7 @@ nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 nnoremap <leader>Y "+Y
 
-nnoremap <leader>P "+P
+nnoremap <leader>p "+P
 
 nnoremap <leader>d "_d 
 vnoremap <leader>d "_d 
@@ -60,8 +60,8 @@ nnoremap <leader>pv :wq<CR>
 nnoremap J mzJ`z
 nnoremap <C-d>  <C-d>zz
 nnoremap <C-u> <C-u>zz
-nnoremap n nzzzv
-nnoremap N Nzzzv
+nnoremap n nzz
+nnoremap N Nzz
 nnoremap Q <nop>
 nnoremap <C-j> :cprev<CR>zz
 nnoremap <leader>k :lnext<CR>zz
@@ -77,5 +77,5 @@ set backup = false
 set nohlsearch
 set incsearch = true
 set scrolloff = 8
-set relativenumber = false
-
+set relativenumber
+set number
