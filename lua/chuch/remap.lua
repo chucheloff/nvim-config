@@ -53,3 +53,5 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+vim.keymap.set("n", "<leader>h" , "<cmd>call search('\\<\\<Bar>\\u', 'bW')<CR>")
+vim.keymap.set("n", "<leader>l" , "<cmd>call search('\\<\\<Bar>\\u', 'W')<CR>")

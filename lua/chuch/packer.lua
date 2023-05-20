@@ -80,5 +80,8 @@ return require('packer').startup(function(use)
             require("nvim-tree").setup {}
         end
     }
+
+    use("tpope/vim-surround")
+    use("adelarsq/vim-matchit")
 end)
 

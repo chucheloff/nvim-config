@@ -2,6 +2,7 @@ set ideajoin
 set idearefactormode=keep
 
 set surround
+set matchit
 
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
@@ -79,3 +80,7 @@ set incsearch = true
 set scrolloff = 8
 set relativenumber
 set number
+
+
+nnoremap <C-Left> :call search('\<\<Bar>\u', 'bW')<CR>
+nnoremap <C-Right> :call search('\<\<Bar>\u', 'W')<CR>
