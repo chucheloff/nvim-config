@@ -1,5 +1,0 @@
-require("chuch.packer")
-require("chuch.nvimtree")
-require("chuch.remap")
-require("chuch.set")
-require("chuch.functions")
