@@ -1,2 +1,2 @@
-require("chuch")
-print("_-_xXxXx-_-bro$ b4 h03$-_-xXxXx_-_")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
